@@ -461,14 +461,20 @@ ul {
   z-index: 1;
 }
 
-.hero video {
+/* Hero background video — add your file as video/hero-loop.mp4 */
+.hero video,
+.hero .hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.3;
+  opacity: 1;
+}
+
+.hero .hero-video {
+  background: var(--dark-blue);
 }
 
 .hero-content {
@@ -500,6 +506,11 @@ ul {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-cta {
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -550,6 +561,7 @@ ul {
   .hero-cta {
     flex-direction: column;
     gap: 12px;
+    align-items: stretch;
   }
 
   .hero-cta .btn {
