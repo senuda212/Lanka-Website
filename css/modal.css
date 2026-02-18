@@ -1,0 +1,128 @@
+/* --- Modal Styles --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #e63946;
+    text-decoration: none;
+}
+
+#modalModelName {
+    color: #1a1a1a;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 15px;
+}
+
+.parts-list {
+    margin-bottom: 25px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.part-category-group {
+    margin-bottom: 20px;
+}
+
+.part-category-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #555;
+    background: #f9f9f9;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.part-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+}
+
+.part-item:last-child {
+    border-bottom: none;
+}
+
+.part-item .part-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.part-item .part-number {
+    font-weight: 600;
+    color: #333;
+}
+
+.part-item .part-brand {
+    font-size: 0.85em;
+    color: #666;
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.part-item .part-meta {
+    font-size: 0.85em;
+    color: #888;
+}
+
+.modal-footer {
+    text-align: right;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.model-tag {
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.model-tag:hover {
+    transform: translateY(-2px);
+    background-color: #e8f5e9; /* Light green tint */
+    border-color: #4CAF50;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vehicle Models — Browse spare parts availability for Toyota, Honda, Nissan, Mitsubishi, Suzuki, Mazda, and 15+ brands at Lanka Auto Parts.">
+    <meta name="keywords" content="vehicle models, spare parts, Toyota parts, Honda parts, Nissan parts, Sri Lanka">
+    <title>Vehicle Models — Lanka Auto Parts & Repairs</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header" role="banner">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="Lanka Auto Parts & Repairs Home">
+                <img src="images/logo.png" alt="Lanka Auto Parts & Repairs" class="logo-img">
+                <div class="logo-text">Lanka Auto Parts<span>& Repairs</span></div>
+            </a>
+            <div class="nav-links" id="navLinks" role="menubar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="models.html" class="active">Vehicle Models</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="hamburger" id="hamburger"
+                aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+
+    <section class="hero hero-sm">
+        <div class="hero-bg"></div>
+        <div class="floating-shapes" aria-hidden="true">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Vehicle <em>Models</em></h1>
+            <p>Genuine spare parts for 15+ brands and hundreds of models.</p>
+            <!-- <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span
+                    class="text-white">Vehicle Models</span></nav> -->
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Browse by Brand</h2>
+            <p class="section-subtitle animate-on-scroll">Search for your vehicle brand and model below.</p>
+            <div class="search-wrap animate-on-scroll">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="modelSearch" placeholder="Search by brand or model..."
+                    aria-label="Search vehicle models">
+            </div>
+
+            <div class="accordion-wrap" id="accordionWrap"></div>
+
+            <div class="text-center animate-on-scroll" style="margin-top:50px;">
+                <p style="color:var(--grey);margin-bottom:20px;">Can't find your model? Send us a specific inquiry.</p>
+                <a href="https://inquiry.lankaautoparts.lk/inquiry" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-green"><i class="fas fa-paper-plane"></i> Send an Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="margin-bottom:16px;">
+                        <img src="images/logo.png" alt="Lanka Auto Parts & Repairs" class="logo-img">
+                        <div class="logo-text">Lanka Auto Parts<span>& Repairs</span></div>
+                    </div>
+                    <p>Your trusted source for vehicle repair and maintenance, genuine vehicle spare parts, sales, and
+                        rentals in Sri Lanka.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1DJ7yEdT1P/" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lanka_auto_parts/" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a
+                        href="services.html">Services</a><a href="models.html">Vehicle Models</a><a
+                        href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4><a href="services.html">Spare Parts</a><a href="services.html">Vehicle Sales</a><a
+                        href="services.html">Vehicle Rentals</a>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt" style="color:var(--orange);margin-right:8px;"></i>26 Church
+                        Road, Wattala, 11300</p>
+                    <p style="margin-top:8px;"><i class="fas fa-phone"
+                            style="color:var(--orange);margin-right:8px;"></i>(+94) 778 282 929</p>
+                    <p style="margin-top:8px;"><i class="fas fa-envelope"
+                            style="color:var(--orange);margin-right:8px;"></i>gothraaservices@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lanka Auto Parts & Repairs. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Floating Inquiry Button -->
+    <a href="https://inquiry.lankaautoparts.lk/inquiry" target="_blank" rel="noopener noreferrer"
+        class="floating-inquiry" aria-label="Make an Inquiry">
+        <i class="fas fa-paper-plane"></i> Make an Inquiry
+    </a>
+    <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+    <!-- Vehicle Details Modal -->
+    <div id="modelModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalModelName">Vehicle Name</h2>
+            <div id="modalPartsList" class="parts-list">
+                <!-- Parts will be injected here -->
+            </div>
+            <div class="modal-footer">
+                <a href="https://inquiry.lankaautoparts.lk/inquiry" target="_blank" class="btn btn-green">Inquire About
+                    Parts</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Load parts data first -->
+    <script type="module" src="js/models-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

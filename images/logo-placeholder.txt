@@ -1,0 +1,9 @@
+Place your logo file here.
+
+Rename your logo to: logo.png
+
+Supported formats: .png, .jpg, .svg, .webp
+If you use .svg or .webp, update the filename in every HTML file:
+  Change "images/logo.png" to "images/logo.svg" (or logo.webp)
+
+Recommended: at least 200px wide, transparent background (PNG) works best on the dark header.
