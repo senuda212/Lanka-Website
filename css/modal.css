@@ -24,6 +24,33 @@
     animation: slideDown 0.3s ease-out;
 }
 
+@media (max-width: 600px) {
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px 16px;
+        width: 94%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .parts-list {
+        max-height: 50vh;
+    }
+
+    .part-item {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .part-item .part-brand {
+        margin-left: 0;
+    }
+
+    .close-modal {
+        font-size: 24px;
+    }
+}
+
 @keyframes slideDown {
     from { transform: translateY(-30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
