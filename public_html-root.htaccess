@@ -1,0 +1,17 @@
+# =============================================================================
+# Optional: redirect domain root → lankaautoparts subfolder
+#
+# Place as:  .htaccess  in THAT DOMAIN'S DOCUMENT ROOT ONLY
+# (the folder that directly CONTAINS the "lankaautoparts" directory — not inside it)
+#
+# Multi-site: each addon domain has its own doc root (e.g. public_html/site.com/).
+# Put this file there, not in public_html, unless this site lives under public_html.
+#
+# Rename on upload if needed: public_html-root.htaccess → .htaccess
+# =============================================================================
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Relative target works for addon domains; avoids wrong absolute /lankaautoparts/ on other vhosts
+RewriteRule ^$ lankaautoparts/ [R=301,L]
+</IfModule>
